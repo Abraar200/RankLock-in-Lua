@@ -1,0 +1,11 @@
+local minRank = -- Minimum rank required to execute the program
+local groupId = -- Group ID
+game.Players.PlayerAdded:Connect(function(play12)
+	if play12:GetRankInGroup(groupId) >= minRank then
+		script.Parent.R10.BillboardGui.Enabled = true
+		script.Parent.R19.BillboardGui.Enabled = true
+	else
+		script.Parent.R10.BillboardGui.Enabled = false
+		script.Parent.R19.BillboardGui.Enabled = false
+	end
+end)
